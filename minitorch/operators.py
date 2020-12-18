@@ -52,7 +52,7 @@ def sigmoid(x):
     for stability.
 
     """
-    return (1.0 / 1.0 + math.exp(-x)) if x >= 0 else math.exp(-x) * (1.0 + math.exp(x))
+    return (1.0 / (1.0 + math.exp(-x))) if x >= 0 else (math.exp(x) / (1.0 + math.exp(x)))
 
 
 def relu(x):
